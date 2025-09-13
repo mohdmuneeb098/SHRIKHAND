@@ -11,33 +11,39 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0d0d0d;
-            color: #e5e7eb;
+            background-color: #FDF9F2;
+            color: #1f2937;
             scroll-behavior: smooth;
         }
         .playfair {
             font-family: 'Playfair Display', serif;
         }
         .header-bg {
-            background-color: rgba(13, 13, 13, 0.8);
+            background-color: rgba(253, 249, 242, 0.8);
             backdrop-filter: blur(10px);
         }
         .section-gradient {
-            background: linear-gradient(180deg, #1f2937, #0d0d0d);
+            background: linear-gradient(180deg, #FDF9F2, #E0DED7);
+        }
+        .royal-brown-text {
+            color: #6C300E;
+        }
+        .royal-brown-bg {
+            background-color: #6C300E;
         }
         .cta-button {
             transition: all 0.3s ease;
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .product-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -46,16 +52,16 @@
     <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 header-bg shadow-lg">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#home" class="text-3xl font-bold playfair text-white tracking-wide">CHASKA</a>
+            <a href="#home" class="text-3xl font-bold playfair royal-brown-text tracking-wide">CHASKA</a>
             <ul class="hidden md:flex space-x-8 text-lg font-medium">
-                <li><a href="#home" class="hover:text-amber-400 transition duration-300">Home</a></li>
-                <li><a href="#flavors" class="hover:text-amber-400 transition duration-300">Flavors</a></li>
-                <li><a href="#team" class="hover:text-amber-400 transition duration-300">Team</a></li>
-                <li><a href="#about" class="hover:text-amber-400 transition duration-300">About Us</a></li>
-                <li><a href="#contact" class="hover:text-amber-400 transition duration-300">Contact</a></li>
+                <li><a href="#home" class="hover:text-amber-600 transition duration-300">Home</a></li>
+                <li><a href="#flavors" class="hover:text-amber-600 transition duration-300">Flavors</a></li>
+                <li><a href="#team" class="hover:text-amber-600 transition duration-300">Team</a></li>
+                <li><a href="#about" class="hover:text-amber-600 transition duration-300">About Us</a></li>
+                <li><a href="#contact" class="hover:text-amber-600 transition duration-300">Contact</a></li>
             </ul>
             <div class="md:hidden">
-                <button id="menu-button" class="text-white focus:outline-none">
+                <button id="menu-button" class="royal-brown-text focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
@@ -63,13 +69,13 @@
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-90 py-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-200 bg-opacity-90 py-4">
             <ul class="flex flex-col items-center space-y-4 text-xl">
-                <li><a href="#home" class="block py-2 hover:text-amber-400">Home</a></li>
-                <li><a href="#flavors" class="block py-2 hover:text-amber-400">Flavors</a></li>
-                <li><a href="#team" class="block py-2 hover:text-amber-400">Team</a></li>
-                <li><a href="#about" class="block py-2 hover:text-amber-400">About Us</a></li>
-                <li><a href="#contact" class="block py-2 hover:text-amber-400">Contact</a></li>
+                <li><a href="#home" class="block py-2 hover:text-amber-600">Home</a></li>
+                <li><a href="#flavors" class="block py-2 hover:text-amber-600">Flavors</a></li>
+                <li><a href="#team" class="block py-2 hover:text-amber-600">Team</a></li>
+                <li><a href="#about" class="block py-2 hover:text-amber-600">About Us</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-amber-600">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -77,13 +83,13 @@
     <main class="pt-24">
 
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/0d0d0d/FFFFFF?text=Shrikhand+Luxury');">
-            <div class="bg-black bg-opacity-60 p-8 md:p-16 rounded-3xl mx-4 max-w-4xl border border-gray-700 shadow-2xl">
-                <h1 class="playfair text-4xl md:text-7xl font-bold text-amber-300 mb-4 animate-fadeInUp">CHASKA</h1>
-                <p class="text-base md:text-xl text-gray-300 mb-8 animate-fadeInUp delay-200">
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://storage.googleapis.com/download-bucket-f402/download.jpeg');">
+            <div class="bg-white bg-opacity-60 p-8 md:p-16 rounded-3xl mx-4 max-w-4xl border border-gray-300 shadow-2xl">
+                <h1 class="playfair text-4xl md:text-7xl font-bold royal-brown-text mb-4 animate-fadeInUp">CHASKA</h1>
+                <p class="text-base md:text-xl text-gray-800 mb-8 animate-fadeInUp delay-200">
                     Shrikhand So Good, You Can’t Stop at One Spoon!
                 </p>
-                <a href="#flavors" class="inline-block py-3 px-8 text-lg font-semibold text-gray-900 bg-white rounded-full cta-button shadow-lg hover:bg-amber-300 transition-all duration-300">
+                <a href="#flavors" class="inline-block py-3 px-8 text-lg font-semibold text-white royal-brown-bg rounded-full cta-button shadow-lg hover:bg-amber-600 transition-all duration-300">
                     Discover Flavors
                 </a>
             </div>
@@ -92,42 +98,42 @@
         <!-- Flavors Section -->
         <section id="flavors" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
-                <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 text-white">Our Signature Flavors</h2>
+                <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Our Signature Flavors</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
                     <!-- Simple Shrikhand Card -->
-                    <div class="product-card bg-gray-800 rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Classic+Shrikhand" alt="Simple Shrikhand" class="w-full h-64 object-cover">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Classic+Shrikhand" alt="Simple Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
-                            <h3 class="playfair text-3xl font-semibold mb-4 text-amber-300">Simple</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">
+                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Simple</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
                                 The pure, classic taste of Shrikhand. A creamy, smooth delight, crafted for the true connoisseur of traditional flavors.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Classic Shrikhand." class="inline-block bg-white text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-amber-300 transition-colors duration-300">Order Now</a>
+                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Classic Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
                         </div>
                     </div>
 
                     <!-- Mango Shrikhand Card -->
-                    <div class="product-card bg-gray-800 rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Mango+Shrikhand" alt="Mango Shrikhand" class="w-full h-64 object-cover">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Mango+Shrikhand" alt="Mango Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
-                            <h3 class="playfair text-3xl font-semibold mb-4 text-amber-300">Mango</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">
+                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Mango</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
                                 A tropical twist on a classic. Made with the finest mango pulp, it's a sweet, tangy, and refreshing experience.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Mango Shrikhand." class="inline-block bg-white text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-amber-300 transition-colors duration-300">Order Now</a>
+                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Mango Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
                         </div>
                     </div>
 
                     <!-- Pista Shrikhand Card -->
-                    <div class="product-card bg-gray-800 rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Pista+Shrikhand" alt="Pista Shrikhand" class="w-full h-64 object-cover">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Pista+Shrikhand" alt="Pista Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
-                            <h3 class="playfair text-3xl font-semibold mb-4 text-amber-300">Pista</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">
+                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Pista</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
                                 A rich and nutty delight. Infused with premium pistachios, this flavor offers a delightful crunch and aroma.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Pista Shrikhand." class="inline-block bg-white text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-amber-300 transition-colors duration-300">Order Now</a>
+                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Pista Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
                         </div>
                     </div>
 
@@ -136,10 +142,10 @@
         </section>
 
         <!-- About Us Preview Section -->
-        <section id="about" class="py-20 bg-gray-900">
+        <section id="about" class="py-20" style="background-color: #E0DED7;">
             <div class="container mx-auto px-4 text-center max-w-3xl">
-                <h2 class="playfair text-4xl md:text-5xl font-bold text-white mb-6">Our Story</h2>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                <h2 class="playfair text-4xl md:text-5xl font-bold royal-brown-text mb-6">Our Story</h2>
+                <p class="text-gray-800 text-lg mb-8 leading-relaxed">
                     CHASKA was born from a passion for traditional Indian sweets and a commitment to crafting them with modern finesse. We believe that true luxury lies in the quality of ingredients and the art of creation. Our Shrikhand is a reflection of this philosophy, a sweet delicacy prepared with meticulous attention to detail and an unwavering love for authentic flavors.
                 </p>
             </div>
@@ -148,62 +154,62 @@
         <!-- Team Section -->
         <section id="team" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
-                <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 text-white">Meet Our Team</h2>
+                <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Meet Our Team</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                     <!-- Team Member 1 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=MM" alt="Mohammad Muneeb" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Mohammad Muneeb</h3>
-                        <p class="text-gray-400 text-sm italic">Founder</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=MM" alt="Mohammad Muneeb" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Mohammad Muneeb</h3>
+                        <p class="text-gray-600 text-sm italic">Founder</p>
                     </div>
                     <!-- Team Member 2 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=IK" alt="Isha Kakani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Isha Kakani</h3>
-                        <p class="text-gray-400 text-sm italic">Marketing Head</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=IK" alt="Isha Kakani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Isha Kakani</h3>
+                        <p class="text-gray-600 text-sm italic">Marketing Head</p>
                     </div>
                     <!-- Team Member 3 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=BD" alt="Bhushan Dasar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Bhushan Dasar</h3>
-                        <p class="text-gray-400 text-sm italic">Product Specialist</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=BD" alt="Bhushan Dasar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Bhushan Dasar</h3>
+                        <p class="text-gray-600 text-sm italic">Product Specialist</p>
                     </div>
                     <!-- Team Member 4 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=PS" alt="Pushpendra Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Pushpendra Singh</h3>
-                        <p class="text-gray-400 text-sm italic">Operations Lead</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=PS" alt="Pushpendra Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Pushpendra Singh</h3>
+                        <p class="text-gray-600 text-sm italic">Operations Lead</p>
                     </div>
                     <!-- Team Member 5 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=TM" alt="Toshi Mate" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Toshi Mate</h3>
-                        <p class="text-gray-400 text-sm italic">Logistics Manager</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=TM" alt="Toshi Mate" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Toshi Mate</h3>
+                        <p class="text-gray-600 text-sm italic">Logistics Manager</p>
                     </div>
                     <!-- Team Member 6 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=AK" alt="Ashutosh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Ashutosh Kumar</h3>
-                        <p class="text-gray-400 text-sm italic">Quality Control</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=AK" alt="Ashutosh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Ashutosh Kumar</h3>
+                        <p class="text-gray-600 text-sm italic">Quality Control</p>
                     </div>
                     <!-- Team Member 7 -->
-                    <div class="bg-gray-800 rounded-3xl p-8 text-center shadow-lg">
-                        <img src="https://placehold.co/200x200/4a5568/FFFFFF?text=SS" alt="Sarabpreet Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-2xl font-semibold playfair text-amber-300">Sarabpreet Singh</h3>
-                        <p class="text-gray-400 text-sm italic">Creative Director</p>
+                    <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
+                        <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=SS" alt="Sarabpreet Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold playfair royal-brown-text">Sarabpreet Singh</h3>
+                        <p class="text-gray-600 text-sm italic">Creative Director</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact CTA Section -->
-        <section id="contact" class="bg-gray-900 py-20 text-center">
+        <section id="contact" style="background-color: #E0DED7;" class="py-20 text-center">
             <div class="container mx-auto px-4">
-                <h2 class="playfair text-4xl md:text-5xl font-bold text-white mb-6">Place Your Order</h2>
-                <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+                <h2 class="playfair text-4xl md:text-5xl font-bold royal-brown-text mb-6">Place Your Order</h2>
+                <p class="text-gray-800 text-lg mb-8 max-w-2xl mx-auto">
                     To place an order or for any inquiries, simply connect with us on WhatsApp. Our team is ready to assist you.
                 </p>
-                <a href="https://wa.me/919528568794?text=Hello, I would like to place an order for Shrikhand." class="inline-flex items-center space-x-4 py-4 px-10 text-xl font-bold text-gray-900 bg-green-500 rounded-full cta-button shadow-xl hover:bg-green-400 transition-all duration-300">
+                <a href="https://wa.me/919528568794?text=Hello, I would like to place an order for Shrikhand." class="inline-flex items-center space-x-4 py-4 px-10 text-xl font-bold text-white royal-brown-bg rounded-full cta-button shadow-xl hover:bg-amber-600 transition-all duration-300">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.04 2C7.03 2 3 6.04 3 11.04c0 1.9 0.58 3.65 1.58 5.09L3.02 21l4.98-1.31c1.47 0.81 3.12 1.3 4.04 1.3C17.05 21 21 16.96 21 11.04S17.05 2 12.04 2zM16.97 15.68c-.27.45-.73.45-1.01.27l-2.02-.9c-.18-.09-.36-.09-.54 0L12 15.68c-.18.09-.36.09-.54 0l-2.02-.9c-.18-.09-.36-.09-.54 0l-2.02.9c-.27.18-.73.18-1.01-.27C6.01 14.89 6 14.62 6 14.35V13.5c0-.9.63-1.62 1.53-1.8L12.04 10c.9-.18 1.53.54 1.53 1.44v.9c0 .18 0 .27-.09.36l-2.02.9c-.18.09-.36.09-.54 0l-2.02-.9c-.18-.09-.36-.09-.54 0l-2.02.9c-.27.18-.73.18-1.01-.27z"></path>
                     </svg>
