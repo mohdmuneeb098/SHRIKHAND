@@ -53,12 +53,17 @@
     <header class="fixed top-0 left-0 right-0 z-50 header-bg shadow-lg">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="#home" class="text-3xl font-bold playfair royal-brown-text tracking-wide">CHASKA</a>
-            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+            <ul class="hidden md:flex items-center space-x-8 text-lg font-medium">
                 <li><a href="#home" class="hover:text-amber-600 transition duration-300">Home</a></li>
                 <li><a href="#flavors" class="hover:text-amber-600 transition duration-300">Flavors</a></li>
                 <li><a href="#team" class="hover:text-amber-600 transition duration-300">Team</a></li>
                 <li><a href="#about" class="hover:text-amber-600 transition duration-300">About Us</a></li>
                 <li><a href="#contact" class="hover:text-amber-600 transition duration-300">Contact</a></li>
+                <li>
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search..." class="bg-gray-200 text-gray-800 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors duration-300 w-40 md:w-48">
+                    </div>
+                </li>
             </ul>
             <div class="md:hidden">
                 <button id="menu-button" class="royal-brown-text focus:outline-none">
@@ -76,6 +81,9 @@
                 <li><a href="#team" class="block py-2 hover:text-amber-600">Team</a></li>
                 <li><a href="#about" class="block py-2 hover:text-amber-600">About Us</a></li>
                 <li><a href="#contact" class="block py-2 hover:text-amber-600">Contact</a></li>
+                <li>
+                     <input type="text" id="searchInputMobile" placeholder="Search..." class="bg-gray-200 text-gray-800 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors duration-300 w-48">
+                </li>
             </ul>
         </div>
     </header>
@@ -83,7 +91,7 @@
     <main class="pt-24">
 
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('mango.jpg');">
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://storage.googleapis.com/download-bucket-f402/download.jpeg');">
             <div class="bg-white bg-opacity-60 p-8 md:p-16 rounded-3xl mx-4 max-w-4xl border border-gray-300 shadow-2xl">
                 <h1 class="playfair text-4xl md:text-7xl font-bold royal-brown-text mb-4 animate-fadeInUp">CHASKA</h1>
                 <p class="text-base md:text-xl text-gray-800 mb-8 animate-fadeInUp delay-200">
@@ -99,10 +107,10 @@
         <section id="flavors" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
                 <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Our Signature Flavors</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
 
                     <!-- Simple Shrikhand Card -->
-                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Simple Shrikhand">
                         <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Classic+Shrikhand" alt="Simple Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
                             <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Simple</h3>
@@ -114,7 +122,7 @@
                     </div>
 
                     <!-- Mango Shrikhand Card -->
-                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Mango Shrikhand">
                         <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Mango+Shrikhand" alt="Mango Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
                             <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Mango</h3>
@@ -126,7 +134,7 @@
                     </div>
 
                     <!-- Pista Shrikhand Card -->
-                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Pista Shrikhand">
                         <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Pista+Shrikhand" alt="Pista Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
                             <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Pista</h3>
@@ -134,6 +142,18 @@
                                 A rich and nutty delight. Infused with premium pistachios, this flavor offers a delightful crunch and aroma.
                             </p>
                             <a href="https://wa.me/919528568794?text=I am interested in ordering your Pista Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
+                        </div>
+                    </div>
+
+                     <!-- Kesar Shrikhand Card -->
+                     <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Kesar Shrikhand">
+                        <img src="https://placehold.co/600x400/FDF9F2/6C300E?text=Kesar+Shrikhand" alt="Kesar Shrikhand" class="w-full h-64 object-cover">
+                        <div class="p-8 text-center">
+                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Kesar</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                A luxurious and aromatic experience. Made with the finest saffron strands for a truly royal and fragrant taste.
+                            </p>
+                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Kesar Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
                         </div>
                     </div>
 
@@ -235,7 +255,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for smooth scrolling and mobile menu -->
+    <!-- JavaScript for smooth scrolling, mobile menu, and search functionality -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth scroll for internal links
@@ -256,12 +276,31 @@
             // Mobile menu toggle
             const menuButton = document.getElementById('menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
             menuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchInputMobile = document.getElementById('searchInputMobile');
+            const productsContainer = document.getElementById('products-container');
+            const productCards = productsContainer.querySelectorAll('.product-card');
+
+            const filterProducts = (query) => {
+                const normalizedQuery = query.toLowerCase().trim();
+                productCards.forEach(card => {
+                    const productName = card.getAttribute('data-product-name').toLowerCase();
+                    if (productName.includes(normalizedQuery)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            };
+
+            searchInput.addEventListener('input', (e) => filterProducts(e.target.value));
+            searchInputMobile.addEventListener('input', (e) => filterProducts(e.target.value));
         });
     </script>
 </body>
 </html>
-
