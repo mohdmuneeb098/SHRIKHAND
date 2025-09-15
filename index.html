@@ -119,9 +119,8 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="classic-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="classic-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="classic-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
                             </div>
-                            <button onclick="addToCart('Classic')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -135,9 +134,8 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="mango-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="mango-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="mango-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
                             </div>
-                            <button onclick="addToCart('Mango')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -151,9 +149,8 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="pista-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="pista-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="pista-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
                             </div>
-                            <button onclick="addToCart('Pista')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -167,12 +164,15 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="kesar-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="kesar-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="kesar-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
                             </div>
-                            <button onclick="addToCart('Kesar')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
+                </div>
+                 <!-- Centralized Order Button -->
+                <div class="text-center mt-12">
+                     <button onclick="placeOrder()" class="inline-block royal-brown-bg text-white font-semibold py-4 px-12 rounded-full hover:bg-amber-600 transition-colors duration-300 text-xl shadow-xl">Place Order</button>
                 </div>
             </div>
         </section>
@@ -317,20 +317,32 @@
         searchInput.addEventListener('input', (e) => filterProducts(e.target.value));
         searchInputMobile.addEventListener('input', (e) => filterProducts(e.target.value));
         
-        // Add to Cart Functionality
-        function addToCart(flavor) {
-            let quantity;
-            if (flavor === 'Classic') {
-                quantity = document.getElementById('classic-qty').value;
-            } else if (flavor === 'Mango') {
-                quantity = document.getElementById('mango-qty').value;
-            } else if (flavor === 'Pista') {
-                quantity = document.getElementById('pista-qty').value;
-            } else if (flavor === 'Kesar') {
-                quantity = document.getElementById('kesar-qty').value;
+        // Combined Order Functionality
+        function placeOrder() {
+            const classicQty = document.getElementById('classic-qty').value;
+            const mangoQty = document.getElementById('mango-qty').value;
+            const pistaQty = document.getElementById('pista-qty').value;
+            const kesarQty = document.getElementById('kesar-qty').value;
+            
+            let message = "Hello, I would like to place an order for Shrikhand. Here is my order:\n\n";
+            
+            if (classicQty > 0) {
+                message += `Classic Shrikhand: ${classicQty}\n`;
+            }
+            if (mangoQty > 0) {
+                message += `Mango Shrikhand: ${mangoQty}\n`;
+            }
+            if (pistaQty > 0) {
+                message += `Pista Shrikhand: ${pistaQty}\n`;
+            }
+            if (kesarQty > 0) {
+                message += `Kesar Shrikhand: ${kesarQty}\n`;
             }
 
-            const message = `I would like to order ${quantity} quantity of ${flavor} Shrikhand.`;
+            if (classicQty == 0 && mangoQty == 0 && pistaQty == 0 && kesarQty == 0) {
+              message = "I am interested in placing an order, but have not selected any items.";
+            }
+
             const whatsappUrl = `https://wa.me/919528568794?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
