@@ -56,8 +56,8 @@
             <ul class="hidden md:flex items-center space-x-8 text-lg font-medium">
                 <li><a href="#home" class="hover:text-amber-600 transition duration-300">Home</a></li>
                 <li><a href="#flavors" class="hover:text-amber-600 transition duration-300">Flavors</a></li>
-                <li><a href="#team" class="hover:text-amber-600 transition duration-300">Team</a></li>
                 <li><a href="#about" class="hover:text-amber-600 transition duration-300">About Us</a></li>
+                <li><a href="#team" class="hover:text-amber-600 transition duration-300">Team</a></li>
                 <li><a href="#contact" class="hover:text-amber-600 transition duration-300">Contact</a></li>
                 <li>
                     <div class="relative">
@@ -78,8 +78,8 @@
             <ul class="flex flex-col items-center space-y-4 text-xl">
                 <li><a href="#home" class="block py-2 hover:text-amber-600">Home</a></li>
                 <li><a href="#flavors" class="block py-2 hover:text-amber-600">Flavors</a></li>
-                <li><a href="#team" class="block py-2 hover:text-amber-600">Team</a></li>
                 <li><a href="#about" class="block py-2 hover:text-amber-600">About Us</a></li>
+                <li><a href="#team" class="block py-2 hover:text-amber-600">Team</a></li>
                 <li><a href="#contact" class="block py-2 hover:text-amber-600">Contact</a></li>
                 <li>
                      <input type="text" id="searchInputMobile" placeholder="Search..." class="bg-gray-200 text-gray-800 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors duration-300 w-48">
@@ -107,17 +107,21 @@
         <section id="flavors" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
                 <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Our Signature Flavors</h2>
-                <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-                    <!-- Simple Shrikhand Card -->
-                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Simple Shrikhand">
-                        <img src="download.jpeg" alt="Simple Shrikhand" class="w-full h-64 object-cover">
+                    <!-- Classic Shrikhand Card -->
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Classic Shrikhand">
+                        <img src="download.jpeg" alt="Classic Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
-                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Simple</h3>
+                            <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Classic</h3>
                             <p class="text-gray-600 mb-6 leading-relaxed">
                                 The pure, classic taste of Shrikhand. A creamy, smooth delight, crafted for the true connoisseur of traditional flavors.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Classic Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
+                            <div class="flex items-center justify-center space-x-4 mb-4">
+                                <label for="classic-qty" class="text-gray-700">Quantity:</label>
+                                <input type="number" id="classic-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                            </div>
+                            <button onclick="addToCart('Classic')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -129,7 +133,11 @@
                             <p class="text-gray-600 mb-6 leading-relaxed">
                                 A tropical twist on a classic. Made with the finest mango pulp, it's a sweet, tangy, and refreshing experience.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Mango Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
+                            <div class="flex items-center justify-center space-x-4 mb-4">
+                                <label for="mango-qty" class="text-gray-700">Quantity:</label>
+                                <input type="number" id="mango-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                            </div>
+                            <button onclick="addToCart('Mango')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -141,7 +149,11 @@
                             <p class="text-gray-600 mb-6 leading-relaxed">
                                 A rich and nutty delight. Infused with premium pistachios, this flavor offers a delightful crunch and aroma.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Pista Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
+                            <div class="flex items-center justify-center space-x-4 mb-4">
+                                <label for="pista-qty" class="text-gray-700">Quantity:</label>
+                                <input type="number" id="pista-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                            </div>
+                            <button onclick="addToCart('Pista')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -153,7 +165,11 @@
                             <p class="text-gray-600 mb-6 leading-relaxed">
                                 A luxurious and aromatic experience. Made with the finest saffron strands for a truly royal and fragrant taste.
                             </p>
-                            <a href="https://wa.me/919528568794?text=I am interested in ordering your Kesar Shrikhand." class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Order Now</a>
+                            <div class="flex items-center justify-center space-x-4 mb-4">
+                                <label for="kesar-qty" class="text-gray-700">Quantity:</label>
+                                <input type="number" id="kesar-qty" value="1" min="1" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                            </div>
+                            <button onclick="addToCart('Kesar')" class="inline-block royal-brown-bg text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-600 transition-colors duration-300">Add to Cart</button>
                         </div>
                     </div>
 
@@ -246,8 +262,8 @@
             <div class="flex flex-wrap justify-center space-x-8 mb-6 text-lg">
                 <a href="#home" class="hover:text-white transition-colors duration-300">Home</a>
                 <a href="#flavors" class="hover:text-white transition-colors duration-300">Flavors</a>
-                <a href="#team" class="hover:text-white transition-colors duration-300">Team</a>
                 <a href="#about" class="hover:text-white transition-colors duration-300">About Us</a>
+                <a href="#team" class="hover:text-white transition-colors duration-300">Team</a>
                 <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
             </div>
             <p class="mb-2">&copy; 2025 CHASKA. All rights reserved.</p>
@@ -257,52 +273,67 @@
 
     <!-- JavaScript for smooth scrolling, mobile menu, and search functionality -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scroll for internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (href !== '#') {
-                        e.preventDefault();
-                        document.querySelector(href).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                    // Close mobile menu after clicking a link
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                });
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu after clicking a link
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
-
-            // Mobile menu toggle
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Search functionality
-            const searchInput = document.getElementById('searchInput');
-            const searchInputMobile = document.getElementById('searchInputMobile');
-            const productsContainer = document.getElementById('products-container');
-            const productCards = productsContainer.querySelectorAll('.product-card');
-
-            const filterProducts = (query) => {
-                const normalizedQuery = query.toLowerCase().trim();
-                productCards.forEach(card => {
-                    const productName = card.getAttribute('data-product-name').toLowerCase();
-                    if (productName.includes(normalizedQuery)) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            };
-
-            searchInput.addEventListener('input', (e) => filterProducts(e.target.value));
-            searchInputMobile.addEventListener('input', (e) => filterProducts(e.target.value));
         });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchInputMobile = document.getElementById('searchInputMobile');
+        const productsContainer = document.getElementById('products-container');
+        const productCards = productsContainer.querySelectorAll('.product-card');
+
+        const filterProducts = (query) => {
+            const normalizedQuery = query.toLowerCase().trim();
+            productCards.forEach(card => {
+                const productName = card.getAttribute('data-product-name').toLowerCase();
+                if (productName.includes(normalizedQuery)) {
+                    card.style.display = 'block';
+                    card.style.flex = '0 0 25%';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        };
+
+        searchInput.addEventListener('input', (e) => filterProducts(e.target.value));
+        searchInputMobile.addEventListener('input', (e) => filterProducts(e.target.value));
+        
+        // Add to Cart Functionality
+        function addToCart(flavor) {
+            let quantity;
+            if (flavor === 'Classic') {
+                quantity = document.getElementById('classic-qty').value;
+            } else if (flavor === 'Mango') {
+                quantity = document.getElementById('mango-qty').value;
+            } else if (flavor === 'Pista') {
+                quantity = document.getElementById('pista-qty').value;
+            } else if (flavor === 'Kesar') {
+                quantity = document.getElementById('kesar-qty').value;
+            }
+
+            const message = `I would like to order ${quantity} quantity of ${flavor} Shrikhand.`;
+            const whatsappUrl = `https://wa.me/919528568794?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
     </script>
 </body>
 </html>
-
-
