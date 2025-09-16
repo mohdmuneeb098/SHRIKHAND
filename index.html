@@ -49,7 +49,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 header-bg shadow-lg">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
            <a href="#home" class="flex items-center space-x-2">
@@ -76,7 +75,6 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-200 bg-opacity-90 py-4">
             <ul class="flex flex-col items-center space-y-4 text-xl">
                 <li><a href="#home" class="block py-2 hover:text-amber-600">Home</a></li>
@@ -93,7 +91,6 @@
 
     <main class="pt-24">
 
-        <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('ALL.png');">
             <div class="bg-white bg-opacity-60 p-8 md:p-16 rounded-3xl mx-4 max-w-4xl border border-gray-300 shadow-2xl">
                 <h1 class="playfair text-4xl md:text-7xl font-bold royal-brown-text mb-4 animate-fadeInUp">CHASKA</h1>
@@ -106,13 +103,15 @@
             </div>
         </section>
 
-        <!-- Flavors Section -->
         <section id="flavors" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
                 <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Our Signature Flavors</h2>
+                <div class="text-center mb-8">
+                    <label for="customerName" class="text-gray-700 text-lg">Your Name:</label>
+                    <input type="text" id="customerName" placeholder="Enter your name" class="bg-white text-gray-800 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors duration-300 w-full md:w-1/2 mt-2 shadow-inner">
+                </div>
                 <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-                    <!-- Classic Shrikhand Card -->
                     <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Classic Shrikhand">
                         <img src="PLAIN.png" alt="Classic Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
@@ -122,12 +121,11 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="classic-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="classic-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="classic-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 shadow-md p-2">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mango Shrikhand Card -->
                     <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Mango Shrikhand">
                         <img src="MANGO.png" alt="Mango Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
@@ -137,12 +135,11 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="mango-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="mango-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="mango-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 shadow-md p-2">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pista Shrikhand Card -->
                     <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Pista Shrikhand">
                         <img src="PISTA.png" alt="Pista Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
@@ -152,13 +149,12 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="pista-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="pista-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="pista-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 shadow-md p-2">
                             </div>
                         </div>
                     </div>
 
-                     <!-- Kesar Shrikhand Card -->
-                     <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Kesar Shrikhand">
+                    <div class="product-card bg-white rounded-3xl overflow-hidden shadow-2xl" data-product-name="Kesar Shrikhand">
                         <img src="KESAR.png" alt="Kesar Shrikhand" class="w-full h-64 object-cover">
                         <div class="p-8 text-center">
                             <h3 class="playfair text-3xl font-semibold mb-4 royal-brown-text">Kesar</h3>
@@ -167,20 +163,18 @@
                             </p>
                             <div class="flex items-center justify-center space-x-4 mb-4">
                                 <label for="kesar-qty" class="text-gray-700">Quantity:</label>
-                                <input type="number" id="kesar-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-amber-600 focus:border-amber-600">
+                                <input type="number" id="kesar-qty" value="0" min="0" class="w-20 text-center border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 shadow-md p-2">
                             </div>
                         </div>
                     </div>
 
                 </div>
-                 <!-- Centralized Order Button -->
-                <div class="text-center mt-12">
+                 <div class="text-center mt-12">
                      <button onclick="placeOrder()" class="inline-block royal-brown-bg text-white font-semibold py-4 px-12 rounded-full hover:bg-amber-600 transition-colors duration-300 text-xl shadow-xl">Place Order</button>
                 </div>
             </div>
         </section>
 
-        <!-- About Us Preview Section -->
         <section id="about" class="py-20" style="background-color: #E0DED7;">
             <div class="container mx-auto px-4 text-center max-w-3xl">
                 <h2 class="playfair text-4xl md:text-5xl font-bold royal-brown-text mb-6">Our Story</h2>
@@ -190,48 +184,40 @@
             </div>
         </section>
 
-        <!-- Team Section -->
         <section id="team" class="py-20 section-gradient">
             <div class="container mx-auto px-4">
                 <h2 class="playfair text-4xl md:text-6xl font-bold text-center mb-16 royal-brown-text">Meet Our Team</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-                    <!-- Team Member 1 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=MM" alt="Mohammad Muneeb" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Mohammad Muneeb</h3>
                         <p class="text-gray-600 text-sm italic">Founder</p>
                     </div>
-                    <!-- Team Member 2 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=IK" alt="Isha Kakani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Isha Kakani</h3>
                         <p class="text-gray-600 text-sm italic">Marketing Head</p>
                     </div>
-                    <!-- Team Member 3 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=BD" alt="Bhushan Dasar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Bhushan Dasar</h3>
                         <p class="text-gray-600 text-sm italic">Product Specialist</p>
                     </div>
-                    <!-- Team Member 4 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=PS" alt="Pushpendra Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Pushpendra Singh</h3>
                         <p class="text-gray-600 text-sm italic">Operations Lead</p>
                     </div>
-                    <!-- Team Member 5 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=TM" alt="Toshi Mate" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Toshi Mate</h3>
                         <p class="text-gray-600 text-sm italic">Logistics Manager</p>
                     </div>
-                    <!-- Team Member 6 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=AK" alt="Ashutosh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Ashutosh Kumar</h3>
                         <p class="text-gray-600 text-sm italic">Quality Control</p>
                     </div>
-                    <!-- Team Member 7 -->
                     <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
                         <img src="https://placehold.co/200x200/FDF9F2/6C300E?text=SS" alt="Sarabpreet Singh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h3 class="text-2xl font-semibold playfair royal-brown-text">Sarabpreet Singh</h3>
@@ -241,7 +227,6 @@
             </div>
         </section>
 
-        <!-- Contact CTA Section -->
         <section id="contact" style="background-color: #E0DED7;" class="py-20 text-center">
             <div class="container mx-auto px-4">
                 <h2 class="playfair text-4xl md:text-5xl font-bold royal-brown-text mb-6">Place Your Order</h2>
@@ -259,7 +244,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 py-10">
         <div class="container mx-auto px-4 text-center text-gray-400">
             <div class="flex flex-wrap justify-center space-x-8 mb-6 text-lg">
@@ -274,7 +258,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for smooth scrolling, mobile menu, and search functionality -->
     <script>
         // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -322,12 +305,13 @@
         
         // Combined Order Functionality
         function placeOrder() {
+            const customerName = document.getElementById('customerName').value;
             const classicQty = document.getElementById('classic-qty').value;
             const mangoQty = document.getElementById('mango-qty').value;
             const pistaQty = document.getElementById('pista-qty').value;
             const kesarQty = document.getElementById('kesar-qty').value;
             
-            let message = "Hello, I would like to place an order for Shrikhand. Here is my order:\n\n";
+            let message = `Hello, my name is ${customerName}, and I would like to place an order for Shrikhand. Here is my order:\n\n`;
             
             if (classicQty > 0) {
                 message += `Classic Shrikhand: ${classicQty}\n`;
@@ -342,8 +326,13 @@
                 message += `Kesar Shrikhand: ${kesarQty}\n`;
             }
 
+            if (customerName.trim() === "") {
+                alert("Please enter your name before placing the order.");
+                return; // Stop the function if the name is not provided
+            }
+            
             if (classicQty == 0 && mangoQty == 0 && pistaQty == 0 && kesarQty == 0) {
-              message = "I am interested in placing an order, but have not selected any items.";
+              message = `Hello, my name is ${customerName}, and I am interested in placing an order, but have not selected any items yet.`;
             }
 
             const whatsappUrl = `https://wa.me/919528568794?text=${encodeURIComponent(message)}`;
@@ -352,19 +341,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
